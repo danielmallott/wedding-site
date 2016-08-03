@@ -27,7 +27,7 @@ describe('ShellController', function() {
       $timeout(function() {
         expect($rootScope.showSplash).to.be.false;
         done();
-      }, 1000);
+      }, 1500);
       $timeout.flush();
     });
   });

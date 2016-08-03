@@ -26,10 +26,6 @@ describe('CeremonyController', function() {
       it('should have title of The Ceremony', function() {
         expect(controller.title).to.equal('The Ceremony');
       });
-
-      it('should have logged "Activated"', function() {
-        expect($log.info.logs).to.match(/Activated/);
-      });
     });
   });
 });
