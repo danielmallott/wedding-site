@@ -4,8 +4,9 @@
 @color_warning: #f88529;
 @color_important: #fa3031;
 @color_violet: #932ab6;
-@color_purple: purple;
+@color_purple: #880085;
 @color_mediumpurple: mediumpurple;
+@color_gold: #D4AF37;
 
 * {
     /*-webkit-box-shadow: none !important;
@@ -15,7 +16,7 @@
     -webkit-text-shadow: none !important;
     -ms-text-shadow: none !important;
     text-shadow: none !important;*/
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "Great Vibes", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     /*font-weight: 400;*/
 }
@@ -78,7 +79,7 @@ input[type="radio"], input[type="checkbox"] {
 body {
     font-size: 13px;
     line-height: 23px;
-    color: #666;
+    color: @color_gold;
     background: #111;
     padding-top: 45px;
     -webkit-font-smoothing: antialiased;
@@ -93,7 +94,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     padding: 2px 0;
     margin: 2px 0;
-    color: gold;
+    color: @color_gold;
     font-weight: 400;
 }
 
@@ -531,8 +532,9 @@ form {
 /* Navbar */
 
 .navbar {
-    background: purple;
-  color: gold;
+    background: @color_purple;
+    color: @color_gold;
+    border-bottom: 1px solid @color_gold;
 }
 
     .navbar .container {
@@ -541,7 +543,7 @@ form {
 
     .navbar .nav > li > a {
         font-size: 13px !important;
-        color: gold !important;
+        color: @color_gold !important;
     }
 
     .navbar i {
@@ -549,8 +551,8 @@ form {
     }
 
     .navbar .caret {
-        border-top-color: gold !important;
-        border-bottom-color: gold !important;
+        border-top-color: @color_gold !important;
+        border-bottom-color: @color_gold !important;
     }
 
     .navbar .nav-user-pic {
@@ -562,6 +564,10 @@ form {
         margin-left: 5px;
     }
 
+    .navbar-header {
+      width: 100%;
+      text-align: center;
+    }
 
 /* Sidebar */
 
@@ -569,13 +575,13 @@ form {
     width: 230px;
     float: left;
     display: block;
-    background: purple;
-    color: gold;
+    background: @color_purple;
+    color: @color_gold;
     position: relative;
 }
 
     .sidebar hr {
-        border-bottom: 1px solid gold !important;
+        border-bottom: 1px solid @color_gold !important;
     }
 
     .sidebar ul {
@@ -594,7 +600,9 @@ form {
         margin: 0 auto;
         position: absolute;
         z-index: 60;
-        background: purple;
+        background: @color_purple;
+        border-right: 1px solid @color_gold;
+
     }
 
     .sidebar .navi li i {
@@ -610,21 +618,21 @@ form {
         padding: 12px 20px;
         font-size: 15px;
         line-height: 25px;
-        color: gold;
+        color: @color_gold;
         text-decoration: none;
-        border-bottom: 1px solid gold;
-        background-color: purple;
+        border-bottom: 1px solid @color_gold;
+        background-color: @color_purple;
     }
 
         .sidebar .navi > li > a:hover, .sidebar .navi > li.open > a {
-            border-bottom: 1px solid gold;
-            background-color: purple;
-            color: gold;
+            border-bottom: 1px solid @color_gold;
+            background-color: @color_purple;
+            color: @color_gold;
         }
 
     .sidebar .navi li ul {
         display: none;
-        background: purple;
+        background: @color_purple;
     }
 
     .sidebar .navi li.open ul {
@@ -637,18 +645,18 @@ form {
         padding: 10px 0;
         padding-left: 30px;
         text-decoration: none;
-        color: gold;
-        border-bottom: 1px solid gold;
+        color: @color_gold;
+        border-bottom: 1px solid @color_gold;
     }
 
     .sidebar .navi li ul li.active a {
-        background: mediumpurple;
-        border-bottom: 1px solid gold;
+        background: @color_mediumpurple;
+        border-bottom: 1px solid @color_gold;
     }
 
     .sidebar .navi li ul li a:hover {
-        background: purple;
-        border-bottom: 1px solid gold;
+        background: @color_purple;
+        border-bottom: 1px solid @color_gold;
     }
 
     /* Sidebar colors */
@@ -818,8 +826,9 @@ form {
     margin-left: 230px;
     margin-right: 0;
     width: auto;
-    background: #fff;
+    background: @color_purple;
     min-height: 900px;
+  padding-top: 20px;
 }
 
     .mainbar .container {
@@ -1337,11 +1346,11 @@ form {
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 body {
-    background-color: purple;
+    background-color: @color_purple;
 }
 
 .navbar-inverse {
-    background-color: purple;
+    background-color: @color_purple;
 }
 
 .sidebar-widget form {
@@ -1349,7 +1358,7 @@ body {
 }
 
 .sidebar .navi > li > a {
-    background-color: purple !important;
+    background-color: @color_purple !important;
 }
 
 .sidebar .navi li ul li a {
@@ -1357,7 +1366,7 @@ body {
 }
 
     .sidebar .navi li ul li a:hover {
-        color: mediumpurple;
+        color: @color_mediumpurple;
     }
 
     .sidebar .navi li ul li a:disabled {
@@ -1377,7 +1386,7 @@ body {
 }
 
     .sidebar .sidebar-inner {
-        background-color: purple;
+        background-color: @color_purple;
     }
 
 .sidebar-filler {
@@ -1386,8 +1395,9 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: purple;
+    background-color: @color_purple;
     width: 230px;
+    border-right: 1px solid @color_gold;
 }
 
 /*#endregion */
@@ -1547,12 +1557,13 @@ small {
 .navbar .navbar-brand {
     /*background: url(../images/gg.png) no-repeat left top !important;*/
     margin: 0 1em;
-    height: 45px;
+    height: 65px;
+    width: 90%
 }
 
 .navbar .brand-title {
     /*margin-left: 4em;*/
-    color: gold;
+    color: @color_gold;
 }
 
 .navbar-logo img {
@@ -1580,7 +1591,7 @@ small {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: @color_purple;
     opacity: .9;
     pointer-events: auto;
     -webkit-backface-visibility: hidden;
@@ -1592,20 +1603,20 @@ small {
     -moz-transition: opacity 0.3s linear;
     -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
+    border: 1px solid @color_gold;
 }
 
 .page-splash-message {
     text-align: center;
     margin: 20% auto 0 auto;
     font-size: 400%;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "Great Vibes", Arial, Helvetica, sans-serif;
     font-weight: normal;
     -webkit-text-shadow: 2px 2px #000000;
     text-shadow: 2px 2px #000000;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
-    text-transform: uppercase;
     text-decoration: none;
-    color: #F58A00;
+    color: @color_gold;
     padding: 0;
 }
 

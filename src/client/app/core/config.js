@@ -14,7 +14,7 @@
 
   var config = {
     appErrorPrefix: '[Site Error] ',
-    appTitle: 'Eileen Murphy and Daniel Mallott'
+    appTitle: 'Eileen Murphy & Daniel Mallott'
   };
 
   core.value('config', config);

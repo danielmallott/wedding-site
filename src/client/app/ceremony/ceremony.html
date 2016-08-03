@@ -1,0 +1,32 @@
+<section id="ceremony-view" class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center">The Ceremony will be held at Cantigny Golf Course in Wheaton, IL</h2>
+      </div>
+      <div class="row">
+        <h2 class="text-center">on September 16, 2017 at 4:00pm</h2>
+      </div>
+      <div class="row">
+        <h2 class="text-center">with reception to follow</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+          <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ceremonyVM.googleMapsURL}}">
+            <ng-map center="27w270 Mack Road Wheaton, IL 60189" zoom="13">
+              <marker position="27w270 Mack Road Wheaton, IL 60189"></marker>
+            </ng-map>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <div class="row">
+        <h4 class="text-center">27w270 Mack Road</h4>
+      </div>
+      <div class="row">
+        <h4 class="text-center">Wheaton, IL 60189</h4>
+      </div>
+    </div>
+  </section>
+</section>
