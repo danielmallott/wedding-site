@@ -1,12 +1,39 @@
-﻿var express = require('express');
+﻿/*jshint node:true*/
+'use strict';
+
+var express = require('express');
 var app = express();
-var port = process.env.port || 1337;
+var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var port = process.env.PORT || 8001;
+var four0four = require('./404')();
 
-app.get('/', function (req, res) {
-    res.render('index');
+var environment = process.env.NODE_ENV;
+
+//app.use(favicon(__dirname + '/favicon.ico'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(logger('dev'));
+
+//app.use('/api', require('./routes'));
+
+console.log('About to crank up node');
+console.log('PORT=' + port);
+console.log('NODE_ENV=' + environment);
+
+app.use(express.static('./'));
+// Any invalid calls for templateUrls are under app/* and should return 404
+app.use('/app/*', function(req, res, next) {
+  four0four.send404(req, res);
 });
+// Any deep link calls should return index.html
+app.use('/*', express.static('./index.html'));
 
-var server = app.listen(port, function () {
-    var host = server.address().address;
-    var port = server.address().port;
+
+app.listen(port, function() {
+  console.log('Express server listening on port ' + port);
+  console.log('env = ' + app.get('env') +
+    '\n__dirname = ' + __dirname +
+    '\nprocess.cwd = ' + process.cwd());
 });
