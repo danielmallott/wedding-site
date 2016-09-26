@@ -1,8 +1,11 @@
+/**
+ * Created by dkmallott on 9/25/2016.
+ */
 (function() {
   'use strict';
 
   angular
-    .module('app.admin')
+    .module('app.aboutUs')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,16 +17,16 @@
   function getStates() {
     return [
       {
-        state: 'admin',
+        state: 'about-us',
         config: {
-          url: '/admin',
-          templateUrl: 'app/admin/admin.html',
-          controller: 'AdminController',
-          controllerAs: 'vm',
-          title: 'Admin',
+          url: '/about-us',
+          templateUrl: 'app/about-us/about-us.html',
+          controller: 'AboutUsController',
+          controllerAs: 'aboutUsVM',
+          title: 'About Us',
           settings: {
             nav: 2,
-            content: '<i class="fa fa-lock"></i> Admin'
+            content: '<i class="fa fa-lock"></i> About Us'
           }
         }
       }

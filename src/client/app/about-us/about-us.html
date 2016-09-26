@@ -1,0 +1,33 @@
+<section id="about-us-view" class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <h3>Eileen was born in Highland Park, IL and grew up in Naperville, IL. After graduating from Monmouth College (IL), she moved into Chicago to get her Master's Degree from the Chicago School of Professional Psychology. She currently works as a Human Resources Professional.</h3>
+      </div>
+      <div class="row">
+        <p></p>
+      </div>
+      <div class="row">
+        <h3>Dan was born in Pittsburgh, PA and grew up in Martinsburg, WV. He moved to Louisville, KY, where he lived for 13 years, first dancing with the Louisville Ballet and then working as a software developer after graduating from the University of Louisville. He moved to Chicago in 2014 to further his career.</h3>
+      </div>
+      <div class="row">
+        <p></p>
+      </div>
+      <div class="row">
+        <h3>Dan and Eileen met on <a href="http://www.match.com">Match.com</a> in April of 2015.
+          Dan wanted to try a new way to meet people and Eileen's mother pressured her into signing up. Eileen was the first to reach out - sending a "wink".
+          Dan responded, and shortly after they had their first date at ROCKS Lakeview, sharing a mutual love of bourbon.
+          Fast forward one year, plenty of dates, a few trips (Louisville, Cincinnati, Milwaukee) and a lot of falling in love, Dan proposed to Eileen on April 16, 2016 at ROCKS Lakeview on the (almost) one year anniversary of their first date.
+        </h3>
+      </div>
+      <div class="row">
+        <uib-carousel interval="aboutUsVM.interval" active="aboutUsVM.activeSlide" style="max-height: 400px;">
+          <uib-slide ng-repeat="slide in aboutUsVM.slides" index="$index">
+            <img ng-src="{{slide.image}}" style="margin:auto; max-height:400px;">
+
+          </uib-slide>
+        </uib-carousel>
+      </div>
+    </div>
+  </section>
+</section>
