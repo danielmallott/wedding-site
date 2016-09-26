@@ -79,8 +79,16 @@ gulp.task('fonts', ['clean-fonts'], function() {
   log('Copying fonts');
 
   return gulp
-    .src(config.fonts)
+    .src([config.fonts, config.fontAwesome])
     .pipe(gulp.dest(config.build + 'fonts'));
+});
+
+gulp.task('favicon', function() {
+  log('Copying favicon');
+
+  return gulp
+    .src(config.favicon)
+    .pipe(gulp.dest(config.build));
 });
 
 /**
@@ -191,7 +199,7 @@ gulp.task('build-specs', ['templatecache'], function(done) {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'favicon', 'images', 'fonts'], function() {
   log('Building everything');
 
   var msg = {
