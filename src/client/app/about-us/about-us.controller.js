@@ -18,14 +18,14 @@
     vm.interval = 3000;
     vm.activeSlide = 0;
     vm.slides= [
-      {image: '/src/client/images/Engagement.jpg'},
-      {image: '/src/client/images/Christmas2015.jpg'},
-      {image: '/src/client/images/EileensBirthday.jpg'},
-      {image: '/src/client/images/HarrisonAndSarasWedding1.jpg'},
-      {image: '/src/client/images/RyansBirthday.jpg'},
-      //{image: '/src/client/images/JimBeamDistillery.jpg'},
-      {image: '/src/client/images/HarrisonAndSarasWedding2.jpg'},
-      {image: '/src/client/images/DanAndEileen.jpg'}
+      {image: '/images/Engagement.jpg'},
+      {image: '/images/Christmas2015.jpg'},
+      {image: '/images/EileensBirthday.jpg'},
+      {image: '/images/HarrisonAndSarasWedding1.jpg'},
+      {image: '/images/RyansBirthday.jpg'},
+      //{image: '/images/JimBeamDistillery.jpg'},
+      {image: '/images/HarrisonAndSarasWedding2.jpg'},
+      {image: '/images/DanAndEileen.jpg'}
     ];
 
     activate();
