@@ -578,6 +578,7 @@ form {
     background: @color_purple;
     color: @color_gold;
     position: relative;
+  padding-top: 20px;
 }
 
     .sidebar hr {
@@ -641,7 +642,7 @@ form {
 
     .sidebar .navi li ul li a {
         display: block;
-        background: none;
+        background: @color_purple;
         padding: 10px 0;
         padding-left: 30px;
         text-decoration: none;
@@ -753,15 +754,15 @@ form {
     }
 
         .sidebar .sidebar-dropdown a {
-            color: #ddd;
-            background-color: #343434;
+            color: @color_gold;
+            background-color: @color_mediumpurple;
             padding: 6px;
             text-transform: uppercase;
             text-align: center;
             font-size: 13px;
             display: block;
-            border-top: 1px solid #666;
-            border-bottom: 1px solid #333;
+            border-top: 1px solid @color_gold;
+            border-bottom: 1px solid @color_gold;
         }
 
             .sidebar .sidebar-dropdown a:hover {
@@ -777,15 +778,15 @@ form {
     .sidebar .ui-datepicker {
         width: 95%;
         margin: 0 auto;
-        background: #111;
-        color: #888;
+        background: @color_purple;
+        color: @color_gold;
         border: 0;
         padding: 0;
     }
 
     .sidebar .ui-datepicker-header {
-        background: #222;
-        border: 1px solid #212121;
+        background: @color_purple;
+        border: 1px solid @color_gold;
     }
 
     .sidebar .ui-datepicker-prev:hover {
@@ -803,19 +804,19 @@ form {
     }
 
     .sidebar .ui-state-default {
-        background: #222;
+        background: @color_purple;
         border: 0;
         text-align: center;
-        color: #ccc;
+        color: @color_gold;
     }
 
         .sidebar .ui-state-default:hover {
-            background: #282828;
-            color: #999;
+            background: @color_mediumpurple;
+            color: @color_gold;
         }
 
     .sidebar .ui-state-hightlight, .sidebar .ui-state-active {
-        background: #444;
+        background: @color_mediumpurple;
     }
 
 
@@ -1558,12 +1559,14 @@ small {
     /*background: url(../images/gg.png) no-repeat left top !important;*/
     margin: 0 1em;
     height: 65px;
-    width: 90%
+    width: 90%;
+
 }
 
 .navbar .brand-title {
     /*margin-left: 4em;*/
     color: @color_gold;
+  @media (max-width: 768px) {font-size:24px;}
 }
 
 .navbar-logo img {

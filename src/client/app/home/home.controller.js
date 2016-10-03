@@ -8,9 +8,9 @@
     .module('app.home')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['$q', 'dataservice', 'logger'];
+  HomeController.$inject = ['$rootScope', 'logger'];
   /* @ngInject */
-  function HomeController($q, dataservice, logger) {
+  function HomeController($rootScope, logger) {
     var vm = this;
 
     vm.title = 'Home';
@@ -18,7 +18,7 @@
     activate();
 
     function activate() {
-
+      $rootScope.$broadcast('loadComplete');
     }
   }
 })();

@@ -8,9 +8,9 @@
     .module('app.ceremony')
     .controller('CeremonyController', CeremonyController);
 
-  CeremonyController.$inject = ['$q', 'dataservice', 'logger', 'googleAPIKey'];
+  CeremonyController.$inject = ['$rootScope', 'logger', 'googleAPIKey'];
   /* @ngInject */
-  function CeremonyController($q, dataservice, logger, googleAPIKey) {
+  function CeremonyController($rootScope, logger, googleAPIKey) {
     var vm = this;
     vm.googleMapsURL = 'https://maps.googleapis.com/maps/api/js?key=' + googleAPIKey;
 
@@ -19,7 +19,7 @@
     activate();
 
     function activate() {
-
+      $rootScope.$broadcast('loadComplete');
     }
   }
 })();

@@ -8,9 +8,9 @@
     .module('app.aboutUs')
     .controller('AboutUsController', AboutUsController);
 
-  AboutUsController.$inject = ['$q', 'dataservice', 'logger'];
+  AboutUsController.$inject = ['$rootScope', 'logger'];
   /* @ngInject */
-  function AboutUsController($q, dataservice, logger) {
+  function AboutUsController($rootScope, logger) {
     var vm = this;
 
     vm.title = 'About Us';
@@ -31,7 +31,7 @@
     activate();
 
     function activate() {
-
+      $rootScope.$broadcast('loadComplete');
     }
   }
 })();

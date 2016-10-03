@@ -8,9 +8,9 @@
     .module('app.accommodationsAndTravel')
     .controller('AccommodationsAndTravelController', AccommodationsAndTravelController);
 
-  AccommodationsAndTravelController.$inject = ['$q', 'dataservice', 'logger', 'googleAPIKey'];
+  AccommodationsAndTravelController.$inject = ['$rootScope', 'logger', 'googleAPIKey'];
   /* @ngInject */
-  function AccommodationsAndTravelController($q, dataservice, logger, googleAPIKey) {
+  function AccommodationsAndTravelController($rootScope, logger, googleAPIKey) {
     var vm = this;
     vm.googleMapsURL = 'https://maps.googleapis.com/maps/api/js?key=' + googleAPIKey;
 
@@ -19,7 +19,7 @@
     activate();
 
     function activate() {
-
+      $rootScope.$broadcast('loadComplete');
     }
   }
 })();

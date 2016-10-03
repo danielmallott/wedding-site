@@ -28,6 +28,13 @@
       element.addClass('sidebar');
       $dropdownElement.click(dropdown);
 
+      scope.$on('loadComplete', function() {
+        if($dropdownElement.hasClass('dropy')) {
+          $dropdownElement.removeClass('dropy');
+          $sidebarInner.slideUp(350, scope.whenDoneAnimating);
+        }
+      });
+
       function dropdown(e) {
         var dropClass = 'dropy';
         e.preventDefault();

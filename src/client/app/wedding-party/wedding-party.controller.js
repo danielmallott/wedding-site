@@ -8,9 +8,9 @@
     .module('app.weddingParty')
     .controller('WeddingPartyController', WeddingPartyController);
 
-  WeddingPartyController.$inject = ['$q', 'dataservice', 'logger'];
+  WeddingPartyController.$inject = ['$rootScope', 'logger'];
   /* @ngInject */
-  function WeddingPartyController($q, dataservice, logger) {
+  function WeddingPartyController($rootScope, logger) {
     var vm = this;
 
     vm.title = 'Wedding Party';
@@ -18,7 +18,7 @@
     activate();
 
     function activate() {
-
+      $rootScope.$broadcast('loadComplete');
     }
   }
 })();
