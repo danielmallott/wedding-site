@@ -17,16 +17,16 @@
   function getStates() {
     return [
       {
-        state: 'accommodations-and-travel',
+        state: 'accommodations-and-other-details',
         config: {
-          url: '/accommodations-and-travel',
+          url: '/accommodations-and-other-details',
           templateUrl: 'app/accommodations-and-travel/accommodations-and-travel.html',
           controller: 'AccommodationsAndTravelController',
           controllerAs: 'accommodationsAndTravelVM',
-          title: 'Accommodations And Travel',
+          title: 'Accommodations And Other Details',
           settings: {
             nav: 5,
-            content: '<i class="fa fa-lock"></i> Accommodations And Travel'
+            content: '<i class="fa fa-lock"></i> Accommodations And Other Details'
           }
         }
       }
